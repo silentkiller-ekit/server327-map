@@ -1,1 +1,271 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Server 327 Territory Map</title><style>*{box-sizing:border-box}body{margin:0;background:#101914;color:#fff;font-family:Arial,sans-serif}header{padding:14px 18px;background:#0b120e;display:flex;align-items:center;justify-content:space-between;gap:12px}h1{font-size:22px;margin:0}.switch{display:flex;background:#26382d;border-radius:9px;padding:3px}.switch button{border:0;background:transparent;color:#bbb;padding:8px 13px;border-radius:7px;font-weight:bold;cursor:pointer}.switch button.on{background:#fff;color:#17221d}.wrap{max-width:1180px;margin:auto;padding:12px}.note{background:#22342a;border:1px solid #405b49;padding:10px 13px;border-radius:9px;margin-bottom:10px}.board{overflow:auto;border-radius:8px}.map{position:relative;width:1050px;height:850px;background:#496b4e;border:5px solid #738873;overflow:hidden;box-shadow:0 10px 35px #0008}.zone{position:absolute;border:3px solid #2f4634;box-shadow:inset 0 0 15px #fff2;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:800;font-size:13px;padding:5px}.l1{background:#426b49}.l2{background:#d2b23c}.l3{background:#bf6809}.l4{background:#6c2e72}.l5{background:#2860ad}.l6{background:#d0521d;box-shadow:inset 0 0 22px #ffad55}.claim{border-width:6px}.fln{border-color:#ff9347}.hnb{border-color:#64ef7a}.gld{border-color:#ffe24a}.lass{border-color:#ef72ff}.tag{position:absolute;right:5px;bottom:5px;background:#101914dd;border-radius:5px;padding:3px 6px;font-size:11px}.royal{position:absolute;left:435px;top:335px;width:180px;height:180px;background:#707a74;clip-path:polygon(50% 0,95% 25%,95% 75%,50% 100%,5% 75%,5% 25%);z-index:10;display:flex;align-items:center;justify-content:center;text-align:center;font-size:17px;font-weight:bold;filter:drop-shadow(0 4px 6px #0008)}.legend{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.key{padding:7px 11px;border-radius:5px;font-weight:bold}.details{background:#1d2c24;border:1px solid #3c5545;border-radius:9px;padding:14px;line-height:1.55}.details b{color:#ffe26a}.small{font-size:12px;color:#c8d2cb;margin-top:8px}@media(max-width:650px){header{align-items:flex-start;flex-direction:column}.wrap{padding:6px}.map{transform-origin:top left}.note{font-size:13px}}</style></head><body><header><div><h1 id="title">LAST ASYLUM — SERVER #327</h1><div id="sub" class="small">Interactive diplomatic territory map</div></div><div class="switch"><button id="en" class="on" onclick="lang('en')">EN</button><button id="ru" onclick="lang('ru')">RU</button></div></header><div class="wrap"><div class="note" id="note"></div><div class="board"><div class="map"><div class="zone l1" style="left:0;top:0;width:235px;height:175px">Lv.1</div><div class="zone l1" style="left:235px;top:0;width:220px;height:135px">Lv.1</div><div class="zone l2" style="left:455px;top:0;width:190px;height:160px">Lv.2</div><div class="zone l1" style="left:645px;top:0;width:215px;height:160px">Lv.1</div><div class="zone l1" style="left:860px;top:0;width:190px;height:205px">Lv.1</div><div class="zone l1" style="left:0;top:175px;width:190px;height:190px">Lv.1</div><div class="zone l2 gld claim" style="left:190px;top:135px;width:210px;height:205px"><span data-en="Fox Den · Lv.1" data-ru="Лисья нора · ур.1"></span><i class="tag">GLD</i></div><div class="zone l3" style="left:400px;top:160px;width:180px;height:175px">Lv.3</div><div class="zone l2" style="left:580px;top:160px;width:215px;height:175px">Lv.2</div><div class="zone l2" style="left:795px;top:205px;width:255px;height:170px">Lv.2</div><div class="zone l2 hnb claim" style="left:0;top:365px;width:250px;height:190px"><span data-en="Dry Well / Stardust" data-ru="Сухой колодец / Звёздная пыль"></span><i class="tag">HnB</i></div><div class="zone l3 hnb claim" style="left:250px;top:340px;width:185px;height:190px"><span data-en="Cloudtop OR Cliffside · Lv.3" data-ru="Cloudtop ИЛИ Cliffside · ур.3"></span><i class="tag">HnB</i></div><div class="zone l6" style="left:400px;top:300px;width:250px;height:270px"><span data-en="Inner Zone" data-ru="Внутренняя зона"></span></div><div class="zone l3 hnb claim" style="left:615px;top:340px;width:190px;height:190px"><span data-en="Coastal Citadel · Lv.3" data-ru="Прибрежная цитадель · ур.3"></span><i class="tag">HnB</i></div><div class="zone l2 hnb claim" style="left:805px;top:375px;width:245px;height:180px"><span data-en="Irongate · Lv.2" data-ru="Айронгейт · ур.2"></span><i class="tag">HnB</i></div><div class="royal">👑<br><span data-en="ROYAL CITY" data-ru="КОРОЛЕВСКИЙ ГОРОД"></span></div><div class="zone l4" style="left:250px;top:530px;width:185px;height:165px">Lv.4</div><div class="zone l4" style="left:615px;top:530px;width:190px;height:165px">Lv.4</div><div class="zone l5" style="left:435px;top:570px;width:180px;height:155px">Lv.5</div><div class="zone l2 fln claim" style="left:0;top:555px;width:250px;height:165px"><span data-en="Current Lv.2 · retain" data-ru="Текущая ур.2 · оставить"></span><i class="tag">FLN</i></div><div class="zone l2 gld claim" style="left:805px;top:555px;width:245px;height:165px"><span data-en="Lark Lane · Lv.2" data-ru="Жаворонковый переулок · ур.2"></span><i class="tag">GLD</i></div><div class="zone l1 fln claim" style="left:0;top:720px;width:280px;height:130px"><span data-en="Current Lv.1 · conditional" data-ru="Текущая ур.1 · условно"></span><i class="tag">FLN</i></div><div class="zone l1" style="left:280px;top:725px;width:230px;height:125px">Lv.1</div><div class="zone l1" style="left:510px;top:725px;width:250px;height:125px">Lv.1</div><div class="zone l1" style="left:760px;top:720px;width:290px;height:130px">Lv.1</div></div></div><div class="legend"><span class="key l1">Lv.1</span><span class="key l2">Lv.2</span><span class="key l3">Lv.3</span><span class="key l4">Lv.4</span><span class="key l5">Lv.5</span><span class="key l6">Lv.6</span></div><div class="details" id="details"></div></div><script>const T={en:{note:'Working live allocation map. Colored fields are territory levels; bright alliance borders show known requests or negotiated targets.',details:'<b>FLN</b> — keep current Lv.1 and Lv.2. If Lv.3 + Lv.4 are obtained, FLN will abandon Lv.1.<br><b>HnB</b> — Dry Well, Frostleaf, Irongate, Stardust; one Lv.3 (Cloudtop OR Cliffside) negotiable. Coastal Citadel Lv.3 is their next target. No further advance planned.<br><b>GLD</b> — Fox Den Lv.1 (X:41 Y:485) and Lark Lane Lv.2 (X:140 Y:479). Open to trading.<br><b>Lass</b> — current position known; no additional request yet.'},ru:{note:'Рабочая карта распределения в реальном времени. Цвет поля показывает уровень территории, яркая рамка альянса — известную заявку или согласуемую цель.',details:'<b>FLN</b> — сохранить текущие территории ур.1 и ур.2. Если получат ур.3 + ур.4, откажутся от ур.1.<br><b>HnB</b> — Сухой колодец, Frostleaf, Irongate, Stardust; одна территория ур.3 (Cloudtop ИЛИ Cliffside) обсуждается. Прибрежная цитадель ур.3 — следующая цель. Дальше продвигаться не планируют.<br><b>GLD</b> — Лисья нора ур.1 (X:41 Y:485) и Жаворонковый переулок ур.2 (X:140 Y:479). Готовы к обмену.<br><b>Lass</b> — текущая позиция известна; дополнительных заявок пока нет.'}};function lang(l){document.documentElement.lang=l;document.getElementById('en').classList.toggle('on',l==='en');document.getElementById('ru').classList.toggle('on',l==='ru');document.getElementById('sub').textContent=l==='en'?'Interactive diplomatic territory map':'Интерактивная дипломатическая карта территорий';document.getElementById('note').textContent=T[l].note;document.getElementById('details').innerHTML=T[l].details;document.querySelectorAll('[data-en]').forEach(x=>x.textContent=x.dataset[l]);localStorage.setItem('mapLang',l)}lang(localStorage.getItem('mapLang')||'en');</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0c1510">
+  <title>Server #327 Territory Allocation</title>
+  <style>
+    :root{
+      --bg:#0c1510;--card:#16231b;--card2:#1c2c22;--line:#385140;
+      --text:#f3f6f4;--muted:#adbbb1;--gold:#ffe04b;--green:#71ef83;
+      --orange:#ff9849;--pink:#ed77ff;--danger:#ff7d68;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif}
+    button{font:inherit}
+    header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(14px,env(safe-area-inset-left));background:#09110dcc;border-bottom:1px solid #2e4436;backdrop-filter:blur(12px)}
+    .brand h1{margin:0;font-size:clamp(18px,2.4vw,27px);letter-spacing:.02em}
+    .brand p{margin:4px 0 0;color:var(--muted);font-size:12px}
+    .lang{display:flex;padding:3px;background:#24362b;border:1px solid #405a49;border-radius:10px}
+    .lang button{border:0;background:transparent;color:#b9c4bc;padding:8px 13px;border-radius:7px;font-weight:800;cursor:pointer}
+    .lang button.active{background:#fff;color:#132017}
+    main{max-width:1440px;margin:auto;padding:12px;display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:12px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px #0004}
+    .map-card{padding:10px;min-width:0}
+    .map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:2px 2px 10px}
+    .status{display:flex;align-items:center;gap:7px;color:#c5d0c8;font-size:12px}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:#70ef83;box-shadow:0 0 12px #70ef83}
+    .tools{display:flex;gap:5px}
+    .tools button{width:36px;height:34px;border:1px solid #4b6754;background:#22342a;color:#fff;border-radius:8px;cursor:pointer;font-weight:900;font-size:18px}
+    .tools button:hover{background:#2d4537}
+    .viewport{position:relative;overflow:auto;max-height:calc(100vh - 118px);background:#07100b;border-radius:10px;overscroll-behavior:contain}
+    .map-stage{position:relative;width:100%;min-width:820px;line-height:0;transform-origin:top left}
+    #mapImage{display:block;width:100%;height:auto;aspect-ratio:888/739;background:#3f6548;opacity:0;transition:opacity .25s}
+    #mapImage.ready{opacity:1}
+    .map-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+    .claim{fill-opacity:.14;stroke-width:6;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px #000);pointer-events:all;cursor:pointer}
+    .claim-gld{fill:var(--gold);stroke:var(--gold)}
+    .claim-hnb{fill:var(--green);stroke:var(--green)}
+    .pin{pointer-events:all;cursor:pointer;filter:drop-shadow(0 3px 3px #0008)}
+    .pin .halo{fill:none;stroke-width:2;animation:pulse 2s infinite;transform-box:fill-box;transform-origin:center}
+    .pin text{font:900 9px Inter,Arial,sans-serif;fill:#101510;dominant-baseline:middle;text-anchor:middle}
+    @keyframes pulse{0%{opacity:.9;transform:scale(.7)}75%,100%{opacity:0;transform:scale(1.6)}}
+    .loading{position:absolute;inset:0;display:grid;place-items:center;background:#31553d;color:#e7eee9;font-weight:800;line-height:1.4;text-align:center;z-index:2}
+    .spinner{width:34px;height:34px;border-radius:50%;border:3px solid #ffffff35;border-top-color:#fff;margin:0 auto 9px;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .map-note{padding:9px 3px 0;color:#aebbb2;font-size:11px;line-height:1.45}
+    aside{align-self:start;position:sticky;top:77px;display:grid;gap:12px}
+    .panel{padding:14px}
+    .panel h2{font-size:16px;margin:0 0 10px}
+    .panel h3{font-size:13px;color:#d6dfd9;margin:15px 0 8px;text-transform:uppercase;letter-spacing:.08em}
+    .level-legend{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+    .level{padding:7px 4px;border-radius:7px;text-align:center;font-size:12px;font-weight:900;border:1px solid #ffffff28}
+    .lv1{background:#426a49}.lv2{background:#c19e35}.lv3{background:#b35b04}.lv4{background:#5d2165}.lv5{background:#1f579c}.lv6{background:#c84c19}
+    .entry{position:relative;padding:10px 10px 10px 14px;background:var(--card2);border:1px solid #334b3c;border-radius:9px;margin:7px 0;line-height:1.35;font-size:13px}
+    .entry:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;border-radius:9px 0 0 9px;background:var(--accent)}
+    .entry strong{display:block;margin-bottom:3px;font-size:13px}
+    .entry small{display:block;color:var(--muted);margin-top:3px}
+    .gld{--accent:var(--gold)}.hnb{--accent:var(--green)}.fln{--accent:var(--orange)}.lass{--accent:var(--pink)}
+    .coord{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:#dbe5de}
+    .pending{padding:9px 10px;border:1px dashed #59705f;border-radius:8px;color:#b7c3bb;font-size:12px;line-height:1.45;margin-top:8px}
+    .bonus-grid{display:grid;gap:5px;font-size:12px;color:#cbd5ce}
+    .bonus-grid div{display:flex;justify-content:space-between;gap:10px;padding:5px 7px;background:#1b2a21;border-radius:6px}
+    .bonus-grid span:last-child{color:#fff;text-align:right}
+    .credit{color:#8fa095;font-size:10px;margin-top:10px;line-height:1.4}
+    .tooltip{position:fixed;z-index:100;display:none;max-width:260px;padding:9px 11px;background:#07100bf2;border:1px solid #607766;border-radius:9px;box-shadow:0 10px 28px #000a;font-size:12px;line-height:1.45;pointer-events:none}
+    .tooltip b{font-size:13px}
+    @media(max-width:980px){
+      main{grid-template-columns:1fr}
+      aside{position:static;grid-template-columns:1fr 1fr}
+      .viewport{max-height:none}
+    }
+    @media(max-width:680px){
+      header{align-items:flex-start}
+      main{padding:6px}
+      .map-card{padding:6px}
+      .map-stage{min-width:760px}
+      aside{grid-template-columns:1fr}
+      .status{max-width:65%;line-height:1.25}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <h1>LAST ASYLUM · SERVER #327</h1>
+    <p id="subtitle"></p>
+  </div>
+  <div class="lang" aria-label="Language">
+    <button id="enBtn" type="button" onclick="setLanguage('en')">EN</button>
+    <button id="ruBtn" type="button" onclick="setLanguage('ru')">RU</button>
+  </div>
+</header>
+<main>
+  <section class="card map-card">
+    <div class="map-toolbar">
+      <div class="status"><span class="status-dot"></span><span id="statusText"></span></div>
+      <div class="tools" aria-label="Zoom controls">
+        <button type="button" title="Zoom out" onclick="changeZoom(-0.15)">−</button>
+        <button type="button" title="Reset zoom" onclick="resetZoom()">↺</button>
+        <button type="button" title="Zoom in" onclick="changeZoom(0.15)">+</button>
+      </div>
+    </div>
+    <div class="viewport" id="viewport">
+      <div class="map-stage" id="mapStage">
+        <div class="loading" id="loading"><div><div class="spinner"></div><span id="loadingText"></span></div></div>
+        <img id="mapImage" alt="Server 327 territory map">
+        <svg class="map-overlay" viewBox="0 0 888 739" aria-label="Alliance requests overlay">
+          <!-- Exact territory outlines, extracted from the supplied map. -->
+          <path class="claim claim-gld" data-marker="fox" d="M0 338H105V397H86L85 419H0Z"/>
+          <path class="claim claim-gld" data-marker="lark" d="M205 338L204 342L202 340L110 341V396L108 400L104 402H90V417H174L175 379L212 378V351L206 350L203 347V345L205 344Z"/>
+          <path class="claim claim-hnb" data-marker="coastal" d="M398 519H371L367 525L320 526V535L322 538L335 537L339 541V596L366 597L399 595L400 553L398 545Z"/>
+
+          <g class="pin" data-marker="fox" transform="translate(36 389)">
+            <circle class="halo" r="18" stroke="#ffe04b"/><circle r="13" fill="#ffe04b" stroke="#101510" stroke-width="3"/><text y="1">GLD</text>
+          </g>
+          <g class="pin" data-marker="lark" transform="translate(121 393)">
+            <circle class="halo" r="18" stroke="#ffe04b"/><circle r="13" fill="#ffe04b" stroke="#101510" stroke-width="3"/><text y="1">GLD</text>
+          </g>
+          <g class="pin" data-marker="coastal" transform="translate(349 569)">
+            <circle class="halo" r="18" stroke="#71ef83"/><circle r="13" fill="#71ef83" stroke="#101510" stroke-width="3"/><text y="1">HnB</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="map-note" id="mapNote"></div>
+  </section>
+
+  <aside>
+    <section class="card panel">
+      <h2 id="confirmedTitle"></h2>
+      <div class="level-legend">
+        <div class="level lv1">Lv. 1</div><div class="level lv2">Lv. 2</div><div class="level lv3">Lv. 3</div>
+        <div class="level lv4">Lv. 4</div><div class="level lv5">Lv. 5</div><div class="level lv6">Lv. 6</div>
+      </div>
+      <div class="entry gld" data-card="fox"></div>
+      <div class="entry gld" data-card="lark"></div>
+      <div class="entry hnb" data-card="coastal"></div>
+      <div class="pending" id="exactOnly"></div>
+    </section>
+
+    <section class="card panel">
+      <h2 id="otherTitle"></h2>
+      <div class="entry fln" id="flnEntry"></div>
+      <div class="entry hnb" id="hnbEntry"></div>
+      <div class="entry lass" id="lassEntry"></div>
+      <h3 id="bonusTitle"></h3>
+      <div class="bonus-grid" id="bonusGrid"></div>
+      <div class="credit" id="credit"></div>
+    </section>
+  </aside>
+</main>
+<div class="tooltip" id="tooltip"></div>
+<script>
+  const MAP_PARTS = 4;
+  const I18N = {
+    en: {
+      subtitle: 'Exact source geometry · live diplomatic allocation layer',
+      status: 'Exact map base loaded from the supplied kingdom layout',
+      loading: 'Loading exact map…',
+      confirmedTitle: 'Placed on the map',
+      otherTitle: 'Requests awaiting exact coordinates',
+      exactOnly: 'Only coordinate-confirmed territories are drawn on the map. Nothing is placed by guesswork.',
+      mapNote: 'Bright outlines show the whole requested territory. Pins use the game coordinates supplied in negotiations. Scroll or zoom to inspect the original borders.',
+      bonusTitle: 'Original map terms',
+      credit: 'Base geometry follows the map supplied by the user. Original map credit shown in the source: AllMightyP.',
+      statusRequested: 'Requested', statusNext: 'Next target', level: 'Level', coords: 'Coordinates',
+      fox: {name:'Fox Den', alliance:'GLD', level:1, coords:'X:41 · Y:485', status:'Requested'},
+      lark:{name:'Lark Lane', alliance:'GLD', level:2, coords:'X:140 · Y:479', status:'Requested'},
+      coastal:{name:'Coastal Citadel', alliance:'HnB', level:3, coords:'X:402 · Y:235', status:'Next target'},
+      fln:'<strong>FLN · Fallen</strong>Keep current Lv.1 territories and current Lv.2 territory.<small>Conditional: Lv.1 territories can be released if FLN receives both Lv.3 and Lv.4.</small>',
+      hnb:'<strong>HnB · HoneyBadgers</strong>Dry Well, Frostleaf, Irongate, Stardust and one Lv.3: Cloudtop or Cliffside.<small>Exact coordinates were not supplied for these requests. HnB does not plan further advancement.</small>',
+      lass:'<strong>Lass · PornH</strong>No additional territory request recorded yet.<small>The alliance’s current location is visible in the game screenshots, but no new claim has been submitted.</small>',
+      bonuses:[['Timber Output','Timber production'],['Grain Output','Grain production'],['Herb Output','Herb production'],['Gather Spd','Gathering speed'],['Training Spd','Training speed'],['Building Spd','Building speed'],['Research Spd','Research speed']]
+    },
+    ru: {
+      subtitle: 'Точная исходная геометрия · слой дипломатического распределения',
+      status: 'Основа карты загружена из присланной схемы королевства',
+      loading: 'Загружаю точную карту…',
+      confirmedTitle: 'Нанесено на карту',
+      otherTitle: 'Заявки без точных координат',
+      exactOnly: 'На карту нанесены только территории с подтверждёнными координатами. Ничего не размещается наугад.',
+      mapNote: 'Яркая рамка показывает всю заявленную территорию. Маркеры установлены по игровым координатам из переговоров. Прокручивайте и увеличивайте карту, чтобы рассмотреть исходные границы.',
+      bonusTitle: 'Перевод терминов исходной карты',
+      credit: 'Геометрия сохранена по присланной пользователем карте. Автор, указанный на исходной схеме: AllMightyP.',
+      statusRequested: 'Заявлено', statusNext: 'Следующая цель', level: 'Уровень', coords: 'Координаты',
+      fox: {name:'Лисья нора', alliance:'GLD', level:1, coords:'X:41 · Y:485', status:'Заявлено'},
+      lark:{name:'Жаворонковый переулок', alliance:'GLD', level:2, coords:'X:140 · Y:479', status:'Заявлено'},
+      coastal:{name:'Прибрежная цитадель', alliance:'HnB', level:3, coords:'X:402 · Y:235', status:'Следующая цель'},
+      fln:'<strong>FLN · Fallen</strong>Сохранить текущие территории ур.1 и текущую территорию ур.2.<small>Условие: от территорий ур.1 готовы отказаться, если FLN получит одновременно ур.3 и ур.4.</small>',
+      hnb:'<strong>HnB · HoneyBadgers</strong>Сухой колодец, Frostleaf, Irongate, Stardust и одна территория ур.3: Cloudtop или Cliffside.<small>Для этих заявок точные координаты пока не присланы. Дальше HnB продвигаться не планирует.</small>',
+      lass:'<strong>Lass · PornH</strong>Дополнительных заявок на территории пока нет.<small>Текущее расположение альянса видно на игровых скриншотах, но новая заявка не подавалась.</small>',
+      bonuses:[['Timber Output','Добыча древесины'],['Grain Output','Добыча зерна'],['Herb Output','Добыча трав'],['Gather Spd','Скорость сбора'],['Training Spd','Скорость обучения'],['Building Spd','Скорость строительства'],['Research Spd','Скорость исследований']]
+    }
+  };
+
+  let language = new URLSearchParams(location.search).get('lang') || localStorage.getItem('server327-language') || 'en';
+  let zoomLevel = 1;
+  const markerData = ['fox','lark','coastal'];
+
+  function renderCard(key){
+    const d = I18N[language][key];
+    return `<strong>[${d.alliance}] ${d.name}</strong>${I18N[language].level} ${d.level} · ${d.status}<small><span class="coord">${d.coords}</span></small>`;
+  }
+
+  function setLanguage(lang){
+    language = lang === 'ru' ? 'ru' : 'en';
+    localStorage.setItem('server327-language', language);
+    document.documentElement.lang = language;
+    document.getElementById('enBtn').classList.toggle('active', language === 'en');
+    document.getElementById('ruBtn').classList.toggle('active', language === 'ru');
+    const t = I18N[language];
+    document.getElementById('subtitle').textContent = t.subtitle;
+    document.getElementById('statusText').textContent = t.status;
+    document.getElementById('loadingText').textContent = t.loading;
+    document.getElementById('confirmedTitle').textContent = t.confirmedTitle;
+    document.getElementById('otherTitle').textContent = t.otherTitle;
+    document.getElementById('exactOnly').textContent = t.exactOnly;
+    document.getElementById('mapNote').textContent = t.mapNote;
+    document.getElementById('bonusTitle').textContent = t.bonusTitle;
+    document.getElementById('credit').textContent = t.credit;
+    markerData.forEach(k => document.querySelector(`[data-card="${k}"]`).innerHTML = renderCard(k));
+    document.getElementById('flnEntry').innerHTML = t.fln;
+    document.getElementById('hnbEntry').innerHTML = t.hnb;
+    document.getElementById('lassEntry').innerHTML = t.lass;
+    document.getElementById('bonusGrid').innerHTML = t.bonuses.map(([a,b]) => `<div><span>${a}</span><span>${b}</span></div>`).join('');
+  }
+
+  function showTooltip(event,key){
+    const d = I18N[language][key];
+    const tip = document.getElementById('tooltip');
+    tip.innerHTML = `<b>[${d.alliance}] ${d.name}</b><br>${I18N[language].level} ${d.level} · ${d.status}<br><span class="coord">${d.coords}</span>`;
+    tip.style.display = 'block';
+    const pad = 14, w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = Math.min(innerWidth - w - 8, event.clientX + pad) + 'px';
+    tip.style.top = Math.min(innerHeight - h - 8, event.clientY + pad) + 'px';
+  }
+  function hideTooltip(){ document.getElementById('tooltip').style.display = 'none'; }
+
+  function applyZoom(){
+    document.getElementById('mapStage').style.width = `${zoomLevel * 100}%`;
+  }
+  function changeZoom(delta){ zoomLevel = Math.max(.75, Math.min(2.2, zoomLevel + delta)); applyZoom(); }
+  function resetZoom(){ zoomLevel = 1; applyZoom(); document.getElementById('viewport').scrollTo({left:0,top:0,behavior:'smooth'}); }
+
+  document.querySelectorAll('[data-marker]').forEach(el => {
+    const key = el.dataset.marker;
+    el.addEventListener('mousemove', e => showTooltip(e,key));
+    el.addEventListener('mouseleave', hideTooltip);
+    el.addEventListener('click', () => document.querySelector(`[data-card="${key}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}));
+  });
+
+  async function loadMap(){
+    try{
+      const parts = await Promise.all(Array.from({length:MAP_PARTS},(_,i) => fetch(`assets/map-${i+1}.txt?v=2`).then(r => {
+        if(!r.ok) throw new Error(`Map part ${i+1} failed`);
+        return r.text();
+      })));
+      const img = document.getElementById('mapImage');
+      img.onload = () => { img.classList.add('ready'); document.getElementById('loading').style.display='none'; };
+      img.src = 'data:image/webp;base64,' + parts.join('');
+    }catch(error){
+      document.getElementById('loading').innerHTML = `<div>${error.message}</div>`;
+    }
+  }
+
+  setLanguage(language);
+  loadMap();
+</script>
+</body>
+</html>
