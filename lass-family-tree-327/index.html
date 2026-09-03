@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#16131d">
+  <meta name="color-scheme" content="dark">
+  <title>Семейное древо LASS</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <style>
+    :root{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f6f1ff;background:#0f0d14}
+    *{box-sizing:border-box}body{margin:0;min-height:100dvh;background:radial-gradient(circle at 50% -10%,#39264c 0,#17121f 42%,#0c0a10 100%);display:grid;place-items:center;padding:24px}
+    .card{width:min(560px,100%);background:rgba(25,20,33,.94);border:1px solid #5f4a70;border-radius:24px;padding:26px;box-shadow:0 24px 70px #0009}
+    .crest{width:82px;height:82px;border-radius:22px;background:#21182c;border:1px solid #8b6b9e;display:grid;place-items:center;margin:0 auto 18px;font-weight:900;font-size:22px;letter-spacing:1px;color:#e9d0ff}
+    h1{font-size:28px;line-height:1.1;text-align:center;margin:0 0 8px}p{color:#cfc5d9;line-height:1.55;text-align:center;margin:8px 0 22px}.tag{text-align:center;color:#a990b8;font-size:14px;margin-bottom:22px}
+    button,a.btn{appearance:none;border:0;text-decoration:none;width:100%;min-height:54px;border-radius:14px;padding:14px 18px;font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:pointer;margin-top:12px}
+    .primary{background:linear-gradient(135deg,#9b6cc0,#6f4c8b);color:white}.secondary{background:#292132;color:#eee4f7;border:1px solid #594966}.small{font-size:13px;color:#9f93aa;text-align:center;margin-top:18px;line-height:1.45}.hidden{display:none!important}
+    #status{margin-top:14px;font-size:14px;color:#c8b6d6;text-align:center;min-height:20px}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="crest">LASS<br>327</div>
+    <h1>Семейное древо LASS</h1>
+    <div class="tag">[LASS] No One Hears · Королевство 327</div>
+    <p>Постоянная точка входа в приложение. Эту страницу можно установить на телефон как приложение.</p>
+    <button id="install" class="primary hidden">Установить приложение</button>
+    <a id="open" class="btn primary" href="https://lass-family-tree-327.olena-rudenk-2500.chatgpt.site/">Открыть семейное древо</a>
+    <button id="help" class="secondary">Как установить</button>
+    <div id="status"></div>
+    <div class="small">Новый адрес больше не зависит от ссылки, которую нужно каждый раз искать в чате. Старую версию пока не удаляем.</div>
+  </main>
+<script>
+const APP='https://lass-family-tree-327.olena-rudenk-2500.chatgpt.site/';
+const installBtn=document.getElementById('install');
+const status=document.getElementById('status');
+let deferredPrompt=null;
+if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.classList.remove('hidden');});
+installBtn.addEventListener('click',async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();const result=await deferredPrompt.userChoice;status.textContent=result.outcome==='accepted'?'Установка запущена.':'Установку отменили.';deferredPrompt=null;installBtn.classList.add('hidden');});
+document.getElementById('help').addEventListener('click',()=>{const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);status.textContent=ios?'На iPhone: Поделиться → На экран «Домой».':'На Android: нажмите «Установить приложение». Если кнопки нет: меню браузера → «Добавить на главный экран» или «Установить приложение».';});
+if(new URLSearchParams(location.search).get('launch')==='1'){location.replace(APP);}
+</script>
+</body>
+</html>
