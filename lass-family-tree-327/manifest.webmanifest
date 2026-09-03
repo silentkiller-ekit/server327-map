@@ -3,9 +3,10 @@
   "short_name": "LASS 327",
   "start_url": "./?launch=1",
   "scope": "./",
-  "display": "standalone",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
   "background_color": "#0f0d14",
-  "theme_color": "#16131d",
+  "theme_color": "#0f0d14",
   "description": "Семейное древо и дома альянса LASS, королевство 327",
   "icons": [
     {
